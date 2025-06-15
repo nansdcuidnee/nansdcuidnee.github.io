@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王港辉 | 个人简介</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme:{
+                extend:{
+                    colors:{
+                        primary: '#1d3557',
+                        accent: '#e63946',
+                        neutral: '#f1faee',
+                        text: '#333',
+                    },
+                    fontFamily:{
+                        inter:['Inter','system-ui','sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities{
+            .content-auto{
+                content-visibility:auto;
+            }
+            .card-shadow{
+                box-shadow:0 4px 20px rgba(0, 0, 0, 0.05);
+            }
+            .card-hover{
+                transition:transform 0.3s ease,box-shadow 0.3s ease;
+            }
+            .card-hover:hover{
+                transform:  translateY(-5px);
+                box-shadow:0 8px 30px rgba(0, 0, 0, 0.1);
+            }
+            .skill-tag{
+                transition:all 0.3s ease;
+            }
+            .skill-tag:hover{
+                background-color:var(--primary-color);
+                color: white;
+                transform: translateY(-2px);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-white rounded-xl p-6 mb-6 card-shadow">
+        <img src="2.png" alt="个人照片" class="w-36 h-36 rounded-full object-cover border-4 border-white shadow-lg transition-transform duration-300 hover:scale-105 mx-auto">
+        <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-gray-800 mt-4">王港辉</h1>
+        <p class="text-gray-600">湖南科技大学 | 软件工程专业</p>
+        <p class="text-primary font-medium">专注于前端开发与全栈技术</p>
+    </header>
+
+    <main class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto w-full px-4">
+        <section class="bg-white rounded-xl p-6 card-shadow card-hover md:col-span-2">
+            <h2 class="text-primary font-semibold text-xl border-b-2 border-accent pb-2 mb-4">个人介绍</h2>
+            <p class="text-gray-600 mb-4">
+                我是一名学习编程的大学生,目前就读于湖南科技大学软件工程专业。
+                熟练掌握C语言和Python语言,正在系统学习前端开发知识,包括HTML、CSS、JavaScript以及React/Vue框架。
+            </p>
+            <p class="text-gray-600">
+                对Web开发有着浓厚的兴趣,希望能够成为一名优秀的软件工程师。
+                热衷于探索新技术,不断提升自己的编程能力和解决问题的能力。  
+            </p>
+
+
+            <h3 class="text-gray-800 font-medium text-lg mt-6 mb-3">核心技能</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">HTML5/CSS3</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">JavaScript ES6+</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">React/Vue框架</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">跨浏览器兼容</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">响应式设计</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">Python开发</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">C语言编程</span>
+                <span class="skill-tag bg-gray-100 px-4 py-1.5 rounded-full text-sm">Git版本控制</span>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl p-6 card-shadow card-hover">
+            <h2 class="text-primary font-semibold text-xl border-b-2 border-accent pb-2 mb-4">联系方式</h2>
+            <div class="flex items-center">
+                <i class="fa fa-phone text-primary w-6"></i>
+                <span class="text-gray-600">邮箱:3167583122@qq.com</span>
+            </div>
+            <div class="flex items-center">
+                <i class="fa fa-phone text-primary w-6"></i>
+                <span class="text-gray-600">电话:13789242657</span>
+            </div>
+            <div class="mt-4 flex space-x-4">
+                <a href="https://github.com/" target="_blank" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fa fa-github text-xl"></i>
+                </a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fa fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fa fa-weixin text-xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl p-6 card-shadow card-hover">
+            <h2 class="text-primary font-semibold text-xl border-b-2 border-accent pb-2 mb-4">教育背景</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-gray-800 font-medium">湖南科技大学</h3>
+                    <p class="text-gray-600">软件工程专业 | 2024-2028</p>
+                    <p class="text-gray-500 text-sm">GPA: 3.0/4.0 | 相关课程:Web开发、数据结构、算法分析</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl p-6 card-shadow card-hover md:col-span-2">
+            <h2 class="text-primary font-semibold text-xl border-b-2 border-accent pb-2 mb-4">个人项目</h2>
+            <div class="space-y-6">
+                <div class="border-l-4 border-accent pl-4 py-2">
+                    <h3 class="text-gray-800 font-medium">响应式网站设计</h3>
+                    <p class="text-gray-600 mt-1">使用HTML,CSS和JavaScript开发的响应式作品集网站,适配各种设备尺寸。</p>
+                    <a href="#" class="inline-block mt-2 text-accent hover:underline">
+                        <i class="fa fa-external-link mr-1"></i>查看项目
+                    </a>
+                </div>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-accent pl-4 py-2">
+                        <h3 class="text-gray-800 font-medium">React电商应用</h3>
+                        <p class="text-gray-600 mt-1">基于React和Redux开发的电子商务平台,包含购物车、支付等功能。</p>
+                        <a href="#" class="inline-block mt-2 text-accent hover:underline">
+                            <i class="fa fa-external-link mr-1"></i>查看项目
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-6 py-4 px-4 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>
+            2024 王港辉 个人简介 | 最后更新: 2025.06.13
+        </p>
+    </footer>
+    
+</body>
+</html> 
